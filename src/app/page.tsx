@@ -110,9 +110,9 @@ export default function Home() {
         Join us today and start turning your fitness dreams into reality!
       </p>
 
-      {/* Fun Fact Section */}
+      {/* Random Fact Section */}
       <div className="col-span-1 md:col-span-2 lg:col-span-3 mt-8 p-6 bg-[#c99e46] rounded-lg text-center text-white">
-        <h3 className="text-lg sm:text-xl font-semibold">Fun Fact!</h3>
+        <h3 className="text-lg sm:text-xl font-semibold">Random Fact!</h3>
         <p className="mt-2 text-sm sm:text-base">
           Did you know? Our community is growing by 20% every month! Join us
           today and be part of the fitness revolution.
