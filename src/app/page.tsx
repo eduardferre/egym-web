@@ -111,12 +111,19 @@ export default function Home() {
       </p>
 
       {/* Random Fact Section */}
-      <div className="col-span-1 md:col-span-2 lg:col-span-3 mt-8 p-6 bg-[#c99e46] rounded-lg text-center text-white">
-        <h3 className="text-lg sm:text-xl font-semibold">Random Fact!</h3>
-        <p className="mt-2 text-sm sm:text-base">
-          Did you know? Our community is growing by 20% every month! Join us
-          today and be part of the fitness revolution.
-        </p>
+      <div className="col-span-1 md:col-span-2 lg:col-span-3 py-8 flex items-center justify-center text-center">
+        <span className="relative overflow-hidden rounded-xl p-[2px]">
+          <span className="absolute inset-[-1000%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FFD700_0%,#FF8C00_50%,#FFD700_100%)]"></span>
+          <div className="flex flex-col items-center justify-center w-full px-8 py-8 text-sm sm:text-base rounded-xl bg-[#2C2C2C] text-white backdrop-blur-3xl ">
+            <h3 className="text-lg sm:text-xl font-semibold text-[#FFD700]">
+              Random Fact!
+            </h3>
+            <p className="mt-2 text-sm sm:text-base text-white/80">
+              Did you know? Our community is growing by 20% every month! Join us
+              today and be part of the fitness revolution.
+            </p>
+          </div>
+        </span>
       </div>
     </div>
   )
