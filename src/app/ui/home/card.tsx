@@ -20,7 +20,11 @@ export const CardTitle = ({
   children: React.ReactNode
   className?: string
 }) => {
-  return <h3 className={'text-lg font-semibold text-white py-2'}>{children}</h3>
+  return (
+    <h3 className={'text-lg md:text-sm font-semibold text-white py-2'}>
+      {children}
+    </h3>
+  )
 }
 
 export const CardDescription = ({
@@ -30,7 +34,7 @@ export const CardDescription = ({
   className?: string
 }) => {
   return (
-    <p className={'text-sm font-normal text-neutral-400 max-w-sm'}>
+    <p className={'text-sm md:text-xs font-normal text-neutral-400'}>
       {children}
     </p>
   )
@@ -46,13 +50,16 @@ export const CardSkeletonContainer = ({
   showGradient?: boolean
 }) => {
   return (
-    <div className={`relative h-[20rem] rounded-xl overflow-hidden`}>
+    <div className={`relative w-full h-[20rem] rounded-xl overflow-hidden`}>
       {showGradient && (
         <div
           className={`${className} absolute inset-0 z-40 bg-[rgba(40,40,40,0.30)] [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent),linear-gradient(to_bottom,transparent,white_20%,white_80%,transparent)]`}
         ></div>
       )}
-      <div className="absolute inset-0">{children}</div>
+      <div className="absolute inset-0 flex items-center justify-center">
+        {/* Ensure the image scales correctly */}
+        <div className="w-full h-full">{children}</div>
+      </div>
     </div>
   )
 }
